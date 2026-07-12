@@ -1,29 +1,28 @@
-[tool.poetry]
+[project]
 name = "kaggle"
 version = "0.1.0"
-description = "Machine Learning model using the Kaggle dataset"
-authors = ["DeCastroo <matheuslc36.mc@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ipywidgets>=8.1.8",
+    "jupyterlab>=4.6.1",
+    "kagglehub>=1.0.2",
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.1",
+    "pandas>=3.0.3",
+    "polars>=1.42.1",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.0",
+]
 
-[tool.poetry.dependencies]
-python = "~3.8"
-ipykernel = "^6.17.0"
-jupyterlab = "^3.5.0"
-ipywidgets = "^8.0.2"
-scipy = "^1.9.3"
-pandas = "^1.5.1"
-numpy = "^1.23.4"
-matplotlib = "^3.6.2"
-plotly = "^5.11.0"
-scikit-learn = "^1.1.3"
+[dependency-groups]
+dev = [
+    "pyright>=1.1.411",
+    "pytest>=9.1.1",
+    "ruff>=0.15.21",
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-black = "^22.10.0"
-nbdime = "^3.1.1"
-jupyterlab-git = "^0.39.3"
-jupyterlab-code-formatter = "^1.5.3"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pyright]
+typeCheckingMode = "standard"  # https://microsoft.github.io/pyright/#/configuration?id=diagnostic-settings-defaults
+deprecateTypingAliases = true
